@@ -1,0 +1,40 @@
+<nav class="navbar shadow navbar-expand-lg bg-body-tertiary position-sticky top-0 start-0 end-0">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-center align-items-center">
+        <img src="./assets/images/ff65d5cef7cbfca5fb16ce382bf4e138.png" class="img-fluid " alt="">
+        <a class="navbar-brand fw-bold mb-0 fs-3">I Found</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="home" routerLinkActive="active-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="lost" routerLinkActive="active-link">Lost</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="reportlost" routerLinkActive="active-link">Report Lost</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="found" routerLinkActive="active-link">Found</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="reportfound" routerLinkActive="active-link"> Report Found</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="ship" routerLinkActive="active-link">Ship Requests </a>
+            </li>
+          </ul>
+        <ul class="navbar-nav ms-auto mb-2 me-3s mb-lg-0">
+          <li class="nav-item">
+            <button class="btn-main" (click)="logout()">logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

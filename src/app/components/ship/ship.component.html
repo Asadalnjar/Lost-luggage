@@ -1,0 +1,54 @@
+<section class="position-relative">
+    <h1 class="fw-bold text-center mt-2">Shipping Requests</h1>
+
+   <div class="d-flex justify-content-center ">
+    <input type="text " placeholder="Search by company Name " class="w-50 " [(ngModel)]="companyName">
+    <button (click)="search()" class="btn-main" >Search</button>
+   </div>
+
+    <div class="container-fluid mt-2">
+        <div class="row">
+            
+            @for (item of Array; track $index) {
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="item rounded p-4  my-2 shadow ">
+                        <h5><b>Id :</b>{{item.id}}</h5>
+                        <hr>
+                        <h5><b>Shipping Company Name :</b>{{item.shippingCompanyName}}</h5>
+                        <hr>
+                        <h5><b>Tracking Number :</b>{{item.trackingNumber}}</h5>
+                        <hr>
+                        <h5><b>Shipping Cost :</b>{{item.shippingCost}}</h5>
+                        <hr>
+                        <h5><b>Delivery Address :</b>{{item.deliveryAddress}}</h5>
+                        <hr>
+                        <h5><b>Status :</b>{{item.status}}</h5>
+                        <hr>
+                        <h5><b>Delivery Date :</b>{{item.deliveryDate}}</h5>
+                        <button class="btn btn-dark w-50 mx-auto d-block mt-3" (click)="fclick()">update Status</button>
+                    
+                    </div>
+
+                    
+                </div>
+            }
+            
+            
+            
+        </div>
+    </div>
+    @if (isClick) {
+        <div class="layer d-flex justify-content-center align-items-center rounded-2">
+            <div class="item2 w-50 p-5 rounded-2 position-relative">
+                <button class="text-white fw-bold close-btn " (click)="close()">close</button>
+
+                @if (message) {<p class="alert alert-info">{{message}}</p>}
+                
+               <input type="text" placeholder="Enter new status " [(ngModel)]="status"> 
+               <button class="btn-main w-50 mx-auto d-block mt-2" (click)="updateStuts()">update</button>
+            </div>
+        </div>
+    }
+
+    
+</section>

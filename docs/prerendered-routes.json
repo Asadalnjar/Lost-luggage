@@ -1,0 +1,14 @@
+{
+  "routes": [
+    "/auth",
+    "/auth/login",
+    "/auth/register",
+    "/main",
+    "/main/found",
+    "/main/home",
+    "/main/lost",
+    "/main/reportfound",
+    "/main/reportlost",
+    "/main/ship"
+  ]
+}

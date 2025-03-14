@@ -1,0 +1,21 @@
+<h1 class="text-center fw-bold mt-3">Report Lost Item</h1>
+
+<section class="w-50 mx-auto rounded bg-light mt-5 p-4 section">
+  
+  @if (errText) {
+    <p class="alert alert-danger w-50 mx-auto text-center">Please Complete feilds</p>
+  }
+    @if (resText) {<p class="text-center alert alert-success w-50 mx-auto">{{resText}}</p>}
+    <form (submit)="onSubmit($event)">
+        <input type="text" placeholder="Flight Number" [(ngModel)]="formData.FlightNumber" name="FlightNumber">
+        <input type="text" placeholder="Description" [(ngModel)]="formData.Description" name="Description">
+        <input type="text" placeholder="Location" [(ngModel)]="formData.Location" name="Location">
+        <input type="text" placeholder="Color" [(ngModel)]="formData.Color" name="Color">
+        <input type="text" placeholder="Unique Marks" [(ngModel)]="formData.UniqueMarks" name="UniqueMarks">
+        <input type="text" placeholder="Reporter Name" [(ngModel)]="formData.ReporterName" name="ReporterName">
+        <input type="email" placeholder="Reporter Email" [(ngModel)]="formData.ReporterEmail" name="ReporterEmail">
+        <input type="tel" placeholder="Reporter Phone" [(ngModel)]="formData.ReporterPhone" name="ReporterPhone">
+        <input type="file" (change)="onFileSelected($event)">
+        <button type="submit" class="btn-main w-50 d-block mx-auto">Submit</button>
+      </form>
+</section>

@@ -1,0 +1,39 @@
+h1{
+    font-size: 70px;
+    color: rgb(7, 79, 7);;
+}
+
+.item{
+   background-color: rgb(253, 253, 253);
+  
+}
+
+input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.layer{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(1, 35, 14, 0.7);
+    height: 100vh;
+  
+}
+.item2{
+    background-image: linear-gradient(to right,#FFE9E9,#EDFFBB);
+
+}
+.close-btn{
+    background-color: red;
+    border-radius: 4px;
+    border: none;
+    position: absolute;
+    top: -27px;
+    right: 0;
+}

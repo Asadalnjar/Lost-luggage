@@ -1,0 +1,83 @@
+<section class="pt-5 position-relative">
+    <div class="container py-5 bg-light rounded-2 cont ">
+        <div class="row">
+            <div class="col-sm-12 col-md-5 p-3">
+                <div class="item">
+                    <img [src]="DetailsArray.imagePath" class="img-fluid rounded-2" alt="">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-7 overflow-hidden">
+                <h5 class="mb-3"><b>Reproter Name :</b> {{DetailsArray.reporterName}}</h5>
+                <h5 class="mb-3"><b>Reporter Email :</b>{{DetailsArray.reporterEmail}}</h5>
+                <h5 class="mb-3"><b>Reporter Phone :</b>{{DetailsArray.reporterPhone}}</h5>
+                <h5 class="mb-3"><b>Report Date :</b>{{DetailsArray.reportDate}}</h5>
+                <h5 class="mb-3"><b>Location : </b> {{DetailsArray.location}}</h5>
+                <h5 class="mb-3"><b>Color : </b>{{DetailsArray.color}}</h5>
+                <h5 class="mb-3"><b>Unique Marks :</b>{{DetailsArray.uniqueMarks}}</h5>
+                <h5 class="mb-3"><b>Descriptoin :</b>{{DetailsArray.description}}</h5>
+                <!-- @if (DetailsArray.isLost==false) { -->
+
+
+                <button class="btn-main  w-50 mx-auto d-block " (click)="fclick()">this is my items</button>
+
+                @if (item) {
+                <div class="ship mt-3">
+
+                    @if (trackingNumber) {<div class="alert alert-info">
+                        <p>Your shipping request has been successfuly submitted! please copy or save your Tracking
+                            number <b>{{trackingNumber}}</b> to track your shippinig</p>
+                        <p><b>Cost :</b> {{shipingCost}}</p>
+                    </div>}
+
+                    <div>
+                        <label for="selectsub" class="me-2 fw-bold">Company Name:</label>
+                        <select name="selectSubject" [(ngModel)]="selectedCampany" id="selectsub"
+                            class="p-2 rounded-2 me-3">
+                            <option value="GHl">GHL</option>
+                            <option value="Fed Ex">Fed Ex</option>
+                            <option value="Aramex">Aramex</option>
+                            <option value="TNT  Express">TNT Express</option>
+                        </select>
+                    </div>
+                    <div class="mt-2">
+                        <label for="address" class="fw-bold">Adress :</label>
+                        <input type="text" class="ms-2" [(ngModel)]="Address">
+                    </div>
+
+                    @if (!isReturn) {<button class="btn-main w-50   d-block mx-auto"
+                        (click)="shipItem()">shiping</button>}
+                    @if (isReturn) {<button class="btn-main w-50   d-block mx-auto "
+                        (click)="showDetails()">ShowDetails</button>}
+                </div>
+
+                }
+
+
+
+            </div>
+
+            @if (isShip) {
+                <div class="layer d-flex justify-content-center align-items-center rounded-2">
+                    <div class="item2 w-75 mx-auto rounded-2 position-relative p-3">
+                        <button class="text-white fw-bold close-btn " (click)="close()">close</button>
+                        <h4><b>Id :</b><span>{{shiparray.id}}</span></h4>
+                        <hr>
+                        <h4><b>Luggage Report Id :</b> <span>{{shiparray.luggageReportId}}dsdfdsff</span></h4>
+                        <hr>
+                        <h4><b>shipping Company Name :</b><span>{{shiparray.shippingCompanyName}}</span></h4>
+                        <hr>
+                        <h4><b>Tracking Number :</b><span>{{shiparray.trackingNumber}}</span></h4>
+                        <hr>
+                        <h4><b>Delivery Address :</b><span>{{shiparray.deliveryAddress}}</span></h4>
+                        <hr>
+                        <h4><b>Status :</b><span>{{shiparray.status}}</span></h4>
+                        <hr>
+                        <h4><b>Delivery Date :</b><span>{{shiparray.deliveryDate}}</span></h4>
+                    </div>
+    
+                </div>
+            }
+        </div>
+
+    </div>
+</section>

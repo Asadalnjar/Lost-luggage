@@ -1,0 +1,48 @@
+input{
+    width: 70%;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 8px;
+}
+
+.ship{
+    background-image: linear-gradient(to right,#FFE9E9,#EDFFBB);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(1, 35, 14, 0.7);
+    height: 100%;
+}
+.item2{
+    background-image: linear-gradient(to right,#FFE9E9,#EDFFBB);
+
+}
+.close-btn{
+    background-color: red;
+    border-radius: 4px;
+    border: none;
+    position: absolute;
+    top: -27px;
+    right: 0;
+
+}
+
+@media (width <=752px) {
+    .item2{
+        width: 100% !important;
+    }
+    
+}
+
+.item2 span{
+    color: rgb(13, 100, 13);
+    margin-left: 10px;
+}

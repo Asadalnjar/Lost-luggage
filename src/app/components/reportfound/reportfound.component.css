@@ -1,0 +1,19 @@
+input{
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 8px;
+}
+
+h1{
+    font-size: 70px;
+    color: rgb(7, 79, 7);;
+}
+
+@media ( width <= 700px) {
+    .section{
+       width: 75% !important;
+    }
+    
+}
